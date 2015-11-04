@@ -25,8 +25,8 @@ main(void)
 
 		if((pid = waitpid(pid, &status, 0)) < 0)
 		{
-			printf("waitpid error\n");
-			exit(-1);
+			err_sys("waitpid error\n");
+//			exit(-1);
 		}
 		printf("$ ");
 	}
